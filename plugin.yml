@@ -1,0 +1,17 @@
+name: TogglePluginsPlugin
+author: jcrm1
+main: com.jcrm1.TogglePluginsPlugin.TogglePluginsPlugin
+version: 1.0
+api-version: 1.8
+commands:
+   toggleplugin:
+      description: Toggles the plugin specified (case-sensitive)
+      usage: /toggleplugin [plugin name]
+permissions:
+    togglepluginsplugin.*:
+        description: Gives access to all TogglePluginsPlugin commands
+        children:
+            togglepluginsplugin.toggleplugin: true
+    togglepluginsplugin.toggleplugin:
+        description: Gives access to the /toggleplugin command
+        default: true
